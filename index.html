@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Acting Portfolio</title>
+    <style>
+        /* Resetting margins and paddings for consistency */
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(145deg, #3b007f, #000);
+            color: gold;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        /* Header section */
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header img {
+            max-width: 150px;
+            height: auto;
+            border: 2px solid gold;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: gold;
+        }
+
+        /* Portfolio Section */
+        section {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            color: gold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .audio-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 215, 0, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .audio-item:hover {
+            background: rgba(255, 215, 0, 0.4);
+        }
+
+        .audio-item span {
+            font-size: 1rem;
+            color: gold;
+            flex: 1;
+        }
+
+        audio {
+            flex: 1;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: gold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            section h2 {
+                font-size: 1.5rem;
+            }
+
+            .audio-item span {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="your-logo.png" alt="Logo" id="logo">
+        <h1>Your Name - Voice Acting Portfolio</h1>
+    </header>
+    <section>
+        <h2>Portfolio</h2>
+        <div class="audio-item">
+            <span>Sample 1</span>
+            <audio controls>
+                <source src="audio1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="audio-item">
+            <span>Sample 2</span>
+            <audio controls>
+                <source src="audio2.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="audio-item">
+            <span>Sample 3</span>
+            <audio controls>
+                <source src="audio3.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </section>
+    <footer>
+        <p>© 2024 Your Name | Contact me at <a href="mailto:your-email@example.com" style="color: gold;">your-email@example.com</a></p>
+    </footer>
+</body>
+</html>
