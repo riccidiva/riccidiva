@@ -1,0 +1,153 @@
+/* Resetting margins and paddings for consistency */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(145deg, #3b007f, #000);
+    color: gold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Header styling */
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+header img {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    max-width: 120px;
+    height: auto;
+    border: 2px solid gold;
+    border-radius: 50%;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: gold;
+    text-align: center;
+}
+
+/* Portfolio Section */
+section {
+    max-width: 900px;
+    width: 100%;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    color: gold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Audio Item Styling */
+.audio-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 215, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+/* Glow Effect on Hover */
+.audio-item:hover {
+    background: rgba(75, 0, 130, 0.4);
+    box-shadow: 0 0 20px 4px purple;
+    transform: translateY(-5px);
+}
+
+/* Glow Animation for Edges */
+.audio-item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+}
+
+.audio-item:hover:before {
+    border-color: purple;
+    box-shadow: 0 0 10px purple;
+}
+
+/* Text inside audio items */
+.audio-item span {
+    font-size: 1rem;
+    color: gold;
+    flex: 1;
+}
+
+/* Audio Player */
+audio {
+    flex: 1;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 20px;
+    background: gold;
+    border: 2px solid purple;
+    color: #3b007f;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+button:hover {
+    background: purple;
+    color: gold;
+    box-shadow: 0 0 15px purple;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: gold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    .audio-item span {
+        font-size: 0.9rem;
+    }
+
+    header img {
+        max-width: 100px;
+    }
+}
