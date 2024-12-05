@@ -118,10 +118,32 @@
             text-shadow: 0 0 15px #ff00ff;
         }
 
-        /* Responsive Design */
+         /* Responsive Design */
         @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 50px; /* Space for the background */
+                position: relative;
+            }
+
+            header img {
+                width: 80px; /* Shrink the logo */
+                height: 80px;
+                position: absolute;
+                top: 10px; /* Very top of the screen */
+                left: 10px; /* Very left of the screen */
+                margin: 0; /* Remove unnecessary margins */
+            }
+
             header h1 {
-                font-size: 2.5rem;
+                margin-top: 120px; /* Space below the logo */
+                font-size: 1.8rem; /* Adjust text size for smaller screens */
+                text-align: center;
+                color: #f7e92f;
+                text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+                width: 100%; /* Center-align the text */
             }
 
             section h2 {
@@ -130,13 +152,7 @@
 
             .audio-item span {
                 font-size: 1rem;
-            }
-
-            header img {
-                width: 120px;
-                height: 120px;
-            }
-        }
+          
     </style>
 </head>
 <body>
