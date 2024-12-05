@@ -22,30 +22,27 @@ body {
 header {
     width: 100%;
     display: flex;
+    flex-direction: row; /* Default to horizontal alignment */
     align-items: center;
     justify-content: center;
     position: relative;
     margin-bottom: 20px;
-    flex-direction: row; /* Default to horizontal alignment */
 }
 
 header img {
-    position: absolute;
-    top: 20px;
-    left: 20px;
     width: 180px; /* Larger size for zoom effect */
     height: 180px; /* Larger size for zoom effect */
     object-fit: cover; /* Zoom effect */
     object-position: center;
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(247, 233, 47, 0.6), 0 0 30px rgba(247, 233, 47, 0.3);
+    margin-right: 20px; /* Space between logo and title */
 }
 
 header h1 {
     font-size: 2.5rem;
     color: gold;
     text-align: center;
-    margin-left: 210px; /* Ensure text doesn't overlap logo */
 }
 
 /* Responsive Design for Small Screens (max-width: 768px) */
@@ -53,13 +50,14 @@ header h1 {
     header {
         flex-direction: column; /* Stack logo and text vertically */
         align-items: center; /* Center everything */
+        margin-top: 40px; /* Add space at the top for smaller screens */
     }
 
     header img {
         width: 150px; /* Smaller logo size on mobile */
         height: 150px; /* Smaller logo size on mobile */
-        top: 0; /* Align top of the logo with the top of the header */
-        left: 0; /* Align logo to the center */
+        margin-right: 0; /* Remove space between logo and text */
+        margin-bottom: 20px; /* Add space below logo */
     }
 
     header h1 {
