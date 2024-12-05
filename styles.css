@@ -26,25 +26,46 @@ header {
     justify-content: center;
     position: relative;
     margin-bottom: 20px;
+    flex-direction: row; /* Default to horizontal alignment */
 }
 
 header img {
     position: absolute;
     top: 20px;
     left: 20px;
-    width: 180px; /* Increased size for zoom effect */
-    height: 180px; /* Increased size for zoom effect */
-    object-fit: cover; /* Ensures the image zooms in while fitting in the circular frame */
-    object-position: center; /* Keeps the image centered even when zoomed in */
-    border-radius: 50%; /* Makes the logo circular */
-    box-shadow: 0 0 15px rgba(247, 233, 47, 0.6), 0 0 30px rgba(247, 233, 47, 0.3); /* Glowing effect */
+    width: 180px; /* Larger size for zoom effect */
+    height: 180px; /* Larger size for zoom effect */
+    object-fit: cover; /* Zoom effect */
+    object-position: center;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(247, 233, 47, 0.6), 0 0 30px rgba(247, 233, 47, 0.3);
 }
-
 
 header h1 {
     font-size: 2.5rem;
     color: gold;
     text-align: center;
+    margin-left: 210px; /* Ensure text doesn't overlap logo */
+}
+
+/* Responsive Design for Small Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack logo and text vertically */
+        align-items: center; /* Center everything */
+    }
+
+    header img {
+        width: 150px; /* Smaller logo size on mobile */
+        height: 150px; /* Smaller logo size on mobile */
+        top: 0; /* Align top of the logo with the top of the header */
+        left: 0; /* Align logo to the center */
+    }
+
+    header h1 {
+        font-size: 2rem; /* Slightly smaller text */
+        margin-left: 0; /* Remove the margin on mobile */
+    }
 }
 
 /* Portfolio Section */
