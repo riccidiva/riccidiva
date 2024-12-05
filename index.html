@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -118,25 +120,8 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-                padding-top: 50px; /* Leave space on top for background image */
-            }
-
-            header img {
-                width: 80px; /* Smaller logo */
-                height: 80px;
-                position: absolute;
-                top: 10px; /* Align to the very top */
-                left: 10px; /* Move to the very corner */
-            }
-
             header h1 {
-                margin-top: 100px; /* Space below the logo */
-                font-size: 1.8rem; /* Slightly smaller text for phones */
-                text-align: center;
-                width: 100%; /* Center the text horizontally */
+                font-size: 2.5rem;
             }
 
             section h2 {
@@ -146,6 +131,43 @@
             .audio-item span {
                 font-size: 1rem;
             }
+
+            header img {
+                width: 120px;
+                height: 120px;
+            }
         }
     </style>
 </head>
+<body>
+    <header>
+        <img src="images/logo">
+        <h1>Diva Ricci - VA Pf</h1>
+    </header>
+    <section>
+        <h2>Pf</h2>
+        <div class="audio-item">
+            <audio controls>
+                <source src="audio1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="audio-item">
+            <audio controls>
+                <source src="audiosamples/audio11.wav" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="audio-item">
+            <audio controls>
+                <source src="audio3.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </section>
+    <footer>
+        <p>© 2024 Diva Ricci | Contact me at <a href="mailto:riccidiva99@gmail.com">divaricci@gmail.com</a></p>
+    </footer>
+</body>
+</html>
+
