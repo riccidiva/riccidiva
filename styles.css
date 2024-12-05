@@ -36,7 +36,7 @@ header img {
     object-position: center;
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(247, 233, 47, 0.6), 0 0 30px rgba(247, 233, 47, 0.3);
-    margin-right: 20px; /* Space between logo and title */
+    margin-right: 30px; /* Increased margin to create space between the logo and text */
 }
 
 header h1 {
@@ -152,7 +152,7 @@ button:hover {
 footer {
     text-align: center;
     margin-top: 30px;
-    color: gold; 
+    color: gold;
 }
 
 /* Responsive Design */
