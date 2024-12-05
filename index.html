@@ -15,7 +15,6 @@
         /* Body styling */
         body {
             font-family: 'Arial', sans-serif;
-            background: radial-gradient(circle, #200038, #000);
             color: #f7e92f;
             display: flex;
             flex-direction: column;
@@ -23,22 +22,27 @@
             justify-content: flex-start;
             padding: 20px;
             min-height: 100vh;
+            position: relative;
+            background-image: url('images/bglarge.PNG'); /* Background image */
+            background-size: cover; /* Ensure the background image covers the full screen */
+            background-position: center; /* Center the background image */
+            background-attachment: fixed; /* Ensure the background doesn't scroll */
         }
 
         /* Header styling */
         header {
             width: 100%;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            flex-direction: column; /* Stack logo and text vertically */
+            align-items: center; /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
             position: relative;
             margin-bottom: 20px;
+            z-index: 2; /* Ensure the header stays above the background */
+            text-align: center; /* Ensure header text is centered */
         }
 
         header img {
-            position: absolute;
-            top: 10px;
-            left: 20px;
             width: 150px;
             height: 150px;
             object-fit: cover;
@@ -51,7 +55,7 @@
             font-size: 3rem;
             color: #f7e92f;
             text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
-            text-align: center;
+            margin-top: 20px; /* Add spacing between logo and text */
         }
 
         /* Portfolio Section */
@@ -118,46 +122,34 @@
             text-shadow: 0 0 15px #ff00ff;
         }
 
-         /* Responsive Design */
+        /* Responsive Design */
         @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: center;
-                justify-content: flex-start;
-                padding-top: 50px; /* Space for the background */
-                position: relative;
-            }
-
             header img {
-                width: 80px; /* Shrink the logo */
+                width: 80px; /* Shrink logo */
                 height: 80px;
-                position: absolute;
-                top: 10px; /* Very top of the screen */
-                left: 10px; /* Very left of the screen */
-                margin: 0; /* Remove unnecessary margins */
+                position: relative; /* Adjust the logo positioning */
+                top: 10px;
+                left: 0; /* Keep it centered */
             }
 
             header h1 {
-                margin-top: 120px; /* Space below the logo */
-                font-size: 1.8rem; /* Adjust text size for smaller screens */
-                text-align: center;
-                color: #f7e92f;
-                text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
-                width: 100%; /* Center-align the text */
+                font-size: 2rem; /* Adjust font size */
+                margin-top: 20px;
             }
 
             section h2 {
-                font-size: 1.5rem;
+                font-size: 1.5rem; /* Reduce size for mobile */
             }
 
             .audio-item span {
-                font-size: 1rem;
-          
+                font-size: 1rem; /* Adjust audio item text size */
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="images/logo">
+        <img src="images/logo" alt="Logo">
         <h1>Diva Ricci - VA Pf</h1>
     </header>
     <section>
@@ -186,4 +178,3 @@
     </footer>
 </body>
 </html>
-
