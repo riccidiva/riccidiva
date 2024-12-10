@@ -50,7 +50,7 @@ header img {
 header h1 {
     font-family: 'Montserrat', sans-serif; /* Clean sans-serif font */
     font-size: 3rem;
-    color: #000; /* Black text */
+    color: #fff;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff; /* White border effect */
     margin-top: 20px;
 }
@@ -72,7 +72,7 @@ section {
 section h2 {
     font-family: 'Montserrat', sans-serif; /* Sans-serif font for modern look */
     font-size: 2rem;
-    color: #000; /* Black text */
+    color: #fff;
     text-align: center;
     margin-bottom: 20px;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff; /* White border effect */
@@ -151,7 +151,7 @@ section h2 {
 .audio-item .play-button {
     width: 0px;
     height: 0px;
-    background-color: #fff;
+    background-color: #000;
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
     display: flex;
@@ -161,7 +161,7 @@ section h2 {
     transition: all 0.3s ease;
     z-index: 2;
     font-size: 3rem;
-    color: #000;
+    color: #fff;
 }
 
 .audio-item .play-button:hover {
@@ -184,7 +184,7 @@ audio {
 footer {
     text-align: center;
     margin-top: 30px;
-    color: #000; /* Black text */
+    color: #fff; /* Black text */
     text-shadow: 0 0 5px #fff; /* Subtle white border */
 }
 
@@ -195,7 +195,7 @@ footer a {
 }
 
 footer a:hover {
-    color: #fff;
+    color: #000;
     text-shadow: 0 0 10px #000;
 }
 
@@ -216,7 +216,6 @@ footer a:hover {
     }
 }
 
-/* Add styling for the text in audio blocks */
 .audio-item .audio-text {
     position: absolute;
     bottom: 20px;
@@ -228,7 +227,6 @@ footer a:hover {
     z-index: 1;
 }
 
-/* Optional: If you want to add hover effects to the text as well */
 .audio-item:hover .audio-text {
     color: #fff; /* Change text color on hover */
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #ff1493, 0 0 50px #ff1493;
