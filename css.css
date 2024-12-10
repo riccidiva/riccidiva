@@ -11,7 +11,7 @@ body, html {
 /* Body styling */
 body {
     font-family: 'Merriweather', serif; /* Elegant serif font */
-    color: #000; /* Black text */
+    color: #fff; /* Black text */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,7 +43,7 @@ header img {
     height: 150px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid #000; /* Black border for contrast */
+    border: 4px solid #fff; /* Black border for contrast */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 0, 0, 0.3);
 }
 
