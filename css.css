@@ -164,10 +164,11 @@ section h2 {
 }
 
 .audio-item .play-button:hover {
-    background-color: #fff;
-    color: #fff; /* Inverse hover effect */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 0, 0, 0.4);
+    background-color: #000; /* Invert button background */
+    color: #fff; /* Invert text color */
+    box-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 60px #ff1493, 0 0 80px #ff1493; /* Pink glow */
 }
+
 
 audio {
     display: none; /* Hide default audio player */
@@ -216,7 +217,7 @@ footer a:hover {
     right: 20px;
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
-    color: #000;
+    color: #fff;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff; /* White border effect */
     z-index: 1;
 }
@@ -224,5 +225,5 @@ footer a:hover {
 /* Optional: If you want to add hover effects to the text as well */
 .audio-item:hover .audio-text {
     color: #fff; /* Change text color on hover */
-    text-shadow: 0 0 10px #000, 0 0 20px #000; /* Black shadow on hover */
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #ff1493, 0 0 50px #ff1493;
 }
