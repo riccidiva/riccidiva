@@ -69,7 +69,7 @@
 
 
          <div class="audio-item" onclick="playAudio(this)">
-            <div class="play-button">▶</div>
+            <div class="play-button">▷</div>
             <audio>
                 <source src="audios/audio3.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
@@ -79,7 +79,7 @@
 
 
          <div class="audio-item" onclick="playAudio(this)">
-            <div class="play-button">▶</div>
+            <div class="play-button">▷</div>
             <audio>
                 <source src="audios/audio3.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
@@ -98,19 +98,19 @@
 
             // Pause other audio items
             document.querySelectorAll('.audio-item audio').forEach(a => a !== audio && a.pause());
-            document.querySelectorAll('.audio-item .play-button').forEach(button => button.textContent = '▶');
+            document.querySelectorAll('.audio-item .play-button').forEach(button => button.textContent = '▷');
 
             if (audio.paused) {
                 audio.play();
                 playButton.textContent = '||';
             } else {
                 audio.pause();
-                playButton.textContent = '▶';
+                playButton.textContent = '▷';
             }
 
             // Reset button when audio ends
             audio.onended = () => {
-                playButton.textContent = '▶';
+                playButton.textContent = '▷';
             };
         }
     </script>
