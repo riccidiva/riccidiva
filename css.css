@@ -1,4 +1,4 @@
-/* Resetting margins and paddings for consistency */
+/* Base Reset */
 body, html {
     margin: 0;
     padding: 0;
@@ -8,208 +8,10 @@ body, html {
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Merriweather:wght@400;700&display=swap');
 
-/* Body styling */
+/* Body Styling */
 body {
-    font-family: 'Merriweather', serif; /* Elegant serif font */
-    color: #fff; /* Black text */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 20px;
-    min-height: 100vh;
-    position: relative;
-    background-image: url('idk.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-/* Header styling */
-header {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-bottom: 20px;
-    z-index: 2;
-    text-align: center;
-}
-
-header img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #fff; /* Black border for contrast */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 0, 0, 0.3);
-}
-
-header h1 {
-    font-family: 'Montserrat', sans-serif; /* Clean sans-serif font */
-    font-size: 3rem;
-    color: #fff; /* Black text */
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff; /* White border effect */
-    margin-top: 20px;
-}
-
-/* Portfolio Section */
-section {
-    max-width: 900px;
-    width: 100%;
-    padding-left: 3.3rem;
-    padding-right: 2rem;
-}
-
-section h2 {
-    font-family: 'Montserrat', sans-serif; /* Sans-serif font for modern look */
-    font-size: 2rem;
-    color: #fff; /* Black text */
-    text-align: center;
-    margin-bottom: 20px;
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff; /* White border effect */
-}
-
-.audio-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    border-radius: 20px;
-    margin-bottom: 15px;
-    position: relative;
-    overflow: hidden;
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    width: 100%;
-    height: 200px;
-    max-width: 800px;
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: overlay; /* Apply blend mode by default */
-    background-color: rgba(0, 0, 0, 0.3); /* Default overlay (lower opacity) */
-}
-
-/* Unique transparent backgrounds for each audio block */
-.audio-item:nth-of-type(1) {
-    background-image: url('yaemikoo.png'); /* BACK1 */
-}
-
-.audio-item:nth-of-type(2) {
-    background-image: url('yaemikoo.png'); /* BACK2 */
-}
-
-.audio-item:nth-of-type(3) {
-    background-image: url('back3.png'); /* BACK3 */
-}
-
-/* Hover effect */
-.audio-item:hover {
-    border-color: #fff;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
-    transform: scale(1.02);
-    background-color: rgba(0, 0, 0, 0.4); /* Darker overlay with higher opacity */
-    background-blend-mode: normal; /* Remove blend mode when hovered */
-}
-
-/* Play Button Styling */
-.audio-item .play-button {
-    width: 0px;
-    height: 0px;
-    background-color: #fff;
-    border-radius: 50%;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 2;
-    font-size: 3rem;
-    color: #000;
-}
-
-.audio-item .play-button:hover {
-    background-color: #fff;
-    color: #fff; /* Inverse hover effect */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 0, 0, 0.4);
-}
-
-audio {
-    display: none; /* Hide default audio player */
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    margin-top: 30px;
-    color: #fff; /* Black text */
-    text-shadow: 0 0 5px #fff; /* Subtle white border */
-}
-
-footer a {
+    font-family: 'Merriweather', serif;
     color: #fff;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-footer a:hover {
-    color: #fff;
-    text-shadow: 0 0 10px #000;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header img {
-        width: 80px;
-        height: 80px;
-    }
-
-    header h1 {
-        font-size: 2rem;
-        margin-top: 20px;
-    }
-
-    section h2 {
-        font-size: 1.5rem;
-    }
-}
-
-/* Add styling for the text */
-.audio-item .audio-text {
-    position: absolute;
-    bottom: 20px; /* Adjust vertical position */
-    right: 20px; /* Adjust horizontal position */
-    font-family: 'Montserrat', sans-serif; /* Sans-serif for the text */
-    font-size: 2rem; /* Adjust the font size */
-    color: #fff; /* Black text */
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff; /* White border effect */
-    z-index: 1; /* Ensure the text stays on top */
-}
-
-/* Optional: If you want to add hover effects to the text as well */
-.audio-item:hover .audio-text {
-    color: #fff; /* Change text color on hover */
-    text-shadow: 0 0 10px #000, 0 0 20px #000; /* Black shadow on hover */
-}
-
-/* Resetting margins and paddings for consistency */
-body, html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Merriweather:wght@400;700&display=swap');
-
-/* Body styling */
-body {
-    font-family: 'Merriweather', serif; /* Elegant serif font */
-    color: #fff; /* Black text */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -223,17 +25,14 @@ body {
     background-attachment: fixed;
 }
 
-/* Header styling */
+/* Header Styling */
 header {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-bottom: 20px;
-    z-index: 2;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 header img {
@@ -241,16 +40,16 @@ header img {
     height: 150px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid #fff; /* Black border for contrast */
+    border: 4px solid #fff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
-    font-family: 'Montserrat', sans-serif; /* Clean sans-serif font */
-    font-size: 3rem;
-    color: #fff; /* Black text */
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff; /* White border effect */
-    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-top: 10px;
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff;
 }
 
 /* Portfolio Section */
@@ -259,21 +58,21 @@ section {
     width: 100%;
     padding-left: 3.3rem;
     padding-right: 2rem;
-    display: flex; /* Enable Flexbox for centering */
-    flex-wrap: wrap; /* Allow wrapping if necessary */
+    display: flex; /* Enable Flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
     justify-content: center; /* Center the items horizontally */
     align-items: center; /* Center the items vertically */
-    gap: 20px; /* Optional: Add space between audio blocks */
+    gap: 20px; /* Space between audio blocks */
     margin-top: 30px; /* Add a little space above the section */
 }
 
 section h2 {
-    font-family: 'Montserrat', sans-serif; /* Sans-serif font for modern look */
+    font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
-    color: #fff; /* Black text */
     text-align: center;
+    color: #fff;
     margin-bottom: 20px;
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff; /* White border effect */
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff;
 }
 
 /* Audio Item Styling */
@@ -281,103 +80,70 @@ section h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    border-radius: 20px;
-    margin-bottom: 15px;
-    position: relative;
-    overflow: hidden;
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
     width: 100%;
-    height: 200px;
-    max-width: 800px;
+    max-width: 300px;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
     background-size: cover;
     background-position: center;
-    background-blend-mode: overlay; /* Apply blend mode by default */
-    background-color: rgba(0, 0, 0, 0.3); /* Default overlay (lower opacity) */
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Unique transparent backgrounds for each audio block */
-
+/* Unique Backgrounds */
 .audio-item:nth-of-type(1) {
-    background-image: url('images/yaemikoo.png'); /* BACK3 */
+    background-image: url('images/yaemikoo.png');
 }
+
 .audio-item:nth-of-type(2) {
-    background-image: url('images/nana.png'); /* BACK1 */
+    background-image: url('images/nana.png');
 }
 
 .audio-item:nth-of-type(3) {
-    background-image: url('images/konekochan.png'); /* BACK2 */
+    background-image: url('images/konekochan.png');
 }
 
-.audio-item:nth-of-type(4) {
-    background-image: url('images/back3.png'); /* BACK3 */
-}
-
-.audio-item:nth-of-type(5) {
-    background-image: url('images/back3.png'); /* BACK3 */
-}
-
-.audio-item:nth-of-type(6) {
-    background-image: url('images/back3.png'); /* BACK3 */
-}
-
-.audio-item:nth-of-type(7) {
-    background-image: url('images/back3.png'); /* BACK3 */
-}
-
-.audio-item:nth-of-type(8) {
-    background-image: url('images/back3.png'); /* BACK3 */
-}
-
-
-
-
-
-/* Hover effect */
 .audio-item:hover {
-    border-color: #fff;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
     transform: scale(1.02);
-    background-color: rgba(0, 0, 0, 0.4); /* Darker overlay with higher opacity */
-    background-blend-mode: normal; /* Remove blend mode when hovered */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* Play Button Styling */
 .audio-item .play-button {
-    width: 0px;
-    height: 0px;
-    background-color: #fff;
-    border-radius: 50%;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 2;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #fff;
+    cursor: pointer;
+    z-index: 2;
+    margin-bottom: 10px;
 }
 
 .audio-item .play-button:hover {
-    background-color: #000; /* Invert button background */
-    color: #fff; /* Invert text color */
-    box-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 60px #ff1493, 0 0 80px #ff1493; /* Pink glow */
+    transform: scale(1.1);
+    color: #ff1493;
 }
 
-
-audio {
-    display: none; /* Hide default audio player */
+/* Audio Text */
+.audio-item .audio-text {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff;
 }
 
 /* Footer */
 footer {
+    margin-top: 20px;
     text-align: center;
-    margin-top: 30px;
-    color: #fff; /* Black text */
-    text-shadow: 0 0 5px #fff; /* Subtle white border */
+    color: #fff;
 }
 
 footer a {
@@ -387,49 +153,52 @@ footer a {
 }
 
 footer a:hover {
-    color: #fff;
     text-shadow: 0 0 10px #000;
 }
 
 /* Responsive Design */
+/* Responsive Design */
 @media (max-width: 768px) {
-    header img {
-        width: 80px;
-        height: 80px;
-    }
-
     header h1 {
+        font-size: 1.8rem;
+    }
+
+    header img {
+        width: 100px;
+        height: 100px;
+    }
+
+    section {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .audio-item {
+        width: 90%;
+    }
+
+    .audio-item .play-button {
         font-size: 2rem;
-        margin-top: 20px;
     }
 
-    section h2 {
-        font-size: 1.5rem;
-    }
-}
-
-/* Add styling for the text in audio blocks */
-.audio-item .audio-text {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-    color: #fff;
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff; /* White border effect */
-    z-index: 1;
-}
-
-/* Optional: If you want to add hover effects to the text as well */
-.audio-item:hover .audio-text {
-    color: #fff; /* Change text color on hover */
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #ff1493, 0 0 50px #ff1493;
-}
-
-
-@media (max-width: 768px) {
     .audio-item .audio-text {
-        font-size: 1.2rem; /* Adjust font size for smaller devices */
+        font-size: 1rem;
+    }
+}
+
+/* Larger Screens */
+@media (min-width: 1024px) {
+    .audio-item {
+        max-width: 700px; /* Increase size for larger screens */
+        padding: 60px;    /* Adjust padding for balance */
+    }
+
+    .audio-item .play-button {
+        font-size: 3rem; /* Scale the play button */
+    }
+
+    .audio-item .audio-text {
+        font-size: 1.4rem; /* Slightly increase text size */
     }
 }
 
