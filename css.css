@@ -157,8 +157,12 @@ footer a:hover {
 }
 
 /* Responsive Design */
-/* Responsive Design */
 @media (max-width: 768px) {
+    body, html {
+        width: 100%;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
     header h1 {
         font-size: 1.8rem;
     }
@@ -171,10 +175,15 @@ footer a:hover {
     section {
         flex-direction: column;
         gap: 15px;
+        width: 100%; /* Ensure section spans the entire viewport width */
+        padding-left: 0; /* Remove side padding to avoid horizontal scroll */
+        padding-right: 0; /* Remove side padding to avoid horizontal scroll */
+        align-items: center; /* Keep the content centered */
+        justify-content: center; /* Center align vertically */
     }
 
     .audio-item {
-        width: 90%;
+        width: 90%; /* Use percentage-based width to fit smaller screens */
     }
 
     .audio-item .play-button {
@@ -186,8 +195,9 @@ footer a:hover {
     }
 }
 
+
 /* Larger Screens */
-@media (min-width: 1024px) {
+@media (min-width: 920px) {
     .audio-item {
         max-width: 700px; /* Increase size for larger screens */
         padding: 60px;    /* Adjust padding for balance */
