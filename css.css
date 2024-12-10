@@ -149,8 +149,8 @@ section h2 {
 
 /* Play Button Styling */
 .audio-item .play-button {
-    width: 60px;
-    height: 60px;
+    width: 0px;
+    height: 0px;
     background-color: #fff;
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
@@ -160,18 +160,17 @@ section h2 {
     cursor: pointer;
     transition: all 0.3s ease;
     z-index: 2;
-    font-size: 2rem; /* Maintain text size */
+    font-size: 3rem;
     color: #000;
-    font-family: 'Arial', sans-serif; /* Fallback to non-emoji font */
-    line-height: 1; /* Ensure proper alignment */
-    text-align: center;
 }
 
 .audio-item .play-button:hover {
-    background-color: #000;
-    color: #fff;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.4);
+    background-color: #000; /* Invert button background */
+    color: #fff; /* Invert text color */
+    box-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 60px #ff1493, 0 0 80px #ff1493; /* Pink glow */
 }
+
+
 
 
 audio {
