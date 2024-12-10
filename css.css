@@ -148,10 +148,11 @@ section h2 {
 
 /* Play Button Styling */
 .audio-item .play-button {
-    width: 0px;
-    height: 0px;
-    background-color: #fff;
-    border-radius: 50%;
+    width: 60px; /* Set the width for the triangular button */
+    height: 60px; /* Set the height for the button */
+    background-color: transparent; /* Transparent background */
+    border: none; /* Remove any borders */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Create the triangle shape */
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
     display: flex;
     align-items: center;
@@ -159,20 +160,19 @@ section h2 {
     cursor: pointer;
     transition: all 0.3s ease;
     z-index: 2;
-    font-size: 3rem;
-    color: #000;
 }
 
 .audio-item .play-button:hover {
-    background-color: #000; /* Invert button background */
-    color: #fff; /* Invert text color */
+    background-color: #fff; /* White background on hover */
     box-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 60px #ff1493, 0 0 80px #ff1493; /* Pink glow */
+    clip-path: polygon(50% 0%, 5% 95%, 95% 95%); /* Slightly enlarge triangle on hover */
 }
 
-
+/* Hide default audio player */
 audio {
-    display: none; /* Hide default audio player */
+    display: none;
 }
+
 
 /* Footer */
 footer {
