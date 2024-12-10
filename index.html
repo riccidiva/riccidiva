@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="css.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Acting Portfolio</title>
+   </head>
+<body>
+    <header>
+        <img src="images/logo.jpg" alt="logo.jpg">
+        <h1> Diva Ricci</h1>
+    </header>
+    <section>
+        <h2>Voice Samples</h2>
+        <div class="audio-item" onclick="playAudio(this)">
+            <div class="play-button">▶</div>
+            <audio>
+                <source src="audios/audio11.wav" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <span class="audio-text">YAE MIKO</span>
+        </div>
+     
+        <div class="audio-item" onclick="playAudio(this)">
+            <div class="play-button">▶</div>
+            <audio>
+                <source src="audios/nana_aud.wav" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <span class="audio-text">NANA OSAKI</span> 
+        </div>
+        <div class="audio-item" onclick="playAudio(this)">
+            <div class="play-button">▶</div>
+            <audio> 
+                <source src="audios/konekochan.m4r" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <span class="audio-text"></span>
+             <span class="audio-text">Koneko Toujou</span>
+        </div>
+
+         <div class="audio-item" onclick="playAudio(this)">
+            <div class="play-button">▶</div>
+            <audio>
+                <source src="audios/audio3.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <span class="audio-text">YAE MIKO</span>
+        </div>
+
+         <div class="audio-item" onclick="playAudio(this)">
+            <div class="play-button">▶</div>
+            <audio>
+                <source src="audios/audio3.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <span class="audio-text">YAE MIKO</span>
+        </div>
+
+         <div class="audio-item" onclick="playAudio(this)">
+            <div class="play-button">▶</div>
+            <audio>
+                <source src="audios/audio3.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <span class="audio-text">YAE MIKO</span>
+        </div>
+
+
+         <div class="audio-item" onclick="playAudio(this)">
+            <div class="play-button">▶</div>
+            <audio>
+                <source src="audios/audio3.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <span class="audio-text">YAE MIKO</span>
+        </div>
+
+
+         <div class="audio-item" onclick="playAudio(this)">
+            <div class="play-button">▶</div>
+            <audio>
+                <source src="audios/audio3.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <span class="audio-text">YAE MIKO</span>
+        </div>
+
+    </section>
+    <footer>
+        <p>© 2024 Diva Ricci | Contact me at <a href="mailto:riccidiva99@gmail.com">divaricci@gmail.com</a></p>
+    </footer>
+    <script>
+        function playAudio(audioItem) {
+            const playButton = audioItem.querySelector('.play-button');
+            const audio = audioItem.querySelector('audio');
+
+            // Pause other audio items
+            document.querySelectorAll('.audio-item audio').forEach(a => a !== audio && a.pause());
+            document.querySelectorAll('.audio-item .play-button').forEach(button => button.textContent = '▶');
+
+            if (audio.paused) {
+                audio.play();
+                playButton.textContent = '||';
+            } else {
+                audio.pause();
+                playButton.textContent = '▶';
+            }
+
+            // Reset button when audio ends
+            audio.onended = () => {
+                playButton.textContent = '▶';
+            };
+        }
+    </script>
+</body>
+</html>
+
